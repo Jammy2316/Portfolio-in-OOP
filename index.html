@@ -1,278 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jam Donna | Portfolio</title>
-  
-  <!-- Bootstrap CSS -->
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-  />
 
-  <!-- Bootstrap JS -->
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-  <!-- Custom Styles -->
-  <style>
-    /* General */
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #626262;
-      color: #ffffff;
-    }
-
-    /* Navbar */
-    .navbar {
-      background: rgba(70, 70, 70, 0.85);
-    }
-
-    .navbar-brand {
-      font-weight: bold;
-      font-size: 1.3rem;
-    }
-
-    .navbar-nav .nav-link {
-      color: white;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    .navbar-nav .nav-link:hover {
-      color: #ffffff;
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
-      background: linear-gradient(180deg, #000000 0%, #111111 100%);
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: bold;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .hero p {
-      font-weight: bold;
-      font-size: 1.4rem;
-      opacity: 0.85;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Section */
-    .section {
-      padding: 80px 0;
-    }
-
-    .section h2 {
-      font-weight: bold;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      text-align: center;
-      color: #000000;
-    }
-
-    .section p{
-        font-size: 1.5rem;
-        color: #ffffff;
-    }
-
-    .section h5 {
-        font-weight: bold;
-    }
-
-    /* Project Cards */
-    .project-card {
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .project-card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
-      height: 220px;
-      object-fit: cover;
-    }
-
-    /* Contact Form */
-    .contact-form input,
-    .contact-form textarea {
-      background: #ffffff;
-      color: rgb(255, 255, 255);
-      border: 1px solid #444;
-    }
-
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: #ffffff;
-    }
-
-    .contact-form button {
-      background-color: #3254fb;
-      border: none;
-    }
-
-    .contact-form button:hover {
-      background-color: #3254fb;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #000;
-      border-top: 1px solid #111;
-      margin-top: 40px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      .hero p {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand text-white" href="#">Jam's Portfolio</a>
-      <button 
-        class="navbar-toggler bg-light" 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#navbarNav"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#projects">Task</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#midterm">Midterm Lab Tasks</a></li>
+    </ul>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>I'm Jam Donna</h1>
-      <p>Computer Science Student | Web Developer | Student Athlete</p>
+  <!-- HEADER SECTION -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Hello, I’m <span class="name-highlight">Jam Donna</span></h1>
+      <p class="tagline">Computer Science Student | Web Developer | Student Athlete</p>
     </div>
-  </section>
+  </header>
 
-  <!-- About -->
-  <section id="about" class="section container">
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
     <h2>About Me</h2>
+    <div class="underline"></div>
     <p>
-      I'm a passionate developer and athlete pursuing a degree in Computer Science at 
-      <strong>City College of Angeles</strong>. I enjoy building innovative web solutions 
-      and competing in volleyball.  
-      <br><br>
-      Volleyball has been a big part of my life—it’s not just a sport but a way to learn teamwork, 
-      discipline, and confidence. It teaches me to stay focused, trust others, and never give up even when 
-      things get tough.  
-      <br><br>
-      I value kindness, honesty, and perseverance in everything I do. My goal is to keep improving, 
-      use my skills to help people, and create something that inspires others along the way.
+      I'm a passionate developer and athlete pursuing a degree in Computer Science at City College of Angeles. 
+      I enjoy building innovative web solutions and competing in volleyball.
+    </p>
+    <p>
+      Volleyball has been a big part of my life—it’s not just a sport but a way to learn teamwork, discipline, and confidence. 
+      It teaches me to stay focused, trust others, and never give up even when things get tough.
+    </p>
+    <p>
+      I value kindness, honesty, and perseverance in everything I do. 
+      My goal is to keep improving, use my skills to help people, and create something that inspires others along the way.
     </p>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="section container">
+  <!-- MIDTERM LAB TASKS -->
+  <section class="midterm" id="midterm">
     <h2>Midterm Lab Tasks</h2>
-    <div class="row g-4">
-      <!-- Task 1 -->
-      <div class="col-md-4">
-        <div class="card bg-dark text-white project-card">
-          <img src="Task.JPG" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Midterm Task 1</h5>
-            <p class="card-text">Python Fundamentals</p>
-            <a href="#" class="btn btn-outline-light">View</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Task 2 -->
-      <div class="col-md-4">
-        <div class="card bg-dark text-white project-card">
-          <img src="Task 2.JPG" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">Midterm Task 2</h5>
-            <p class="card-text">Creating Functions</p>
-            <a href="#" class="btn btn-outline-light">View</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Task 3 -->
-      <div class="col-md-4">
-        <div class="card bg-dark text-white project-card">
-          <img src="Task 3.JPG" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Midterm Task 3</h5>
-            <p class="card-text">Shopping Cart Program</p>
-            <a href="#" class="btn btn-outline-light">View</a>
-          </div>
-        </div>
-      </div>
+    <div class="tasks">
+      <a href="https://github.com/Jammy2316/Portfolio-in-OOP/tree/main/MIDTERM%20TASK/Lab%20Task%201" target="_blank" class="task-card">Lab Task 1</a>
+      <a href="https://github.com/Jammy2316/Portfolio-in-OOP/tree/main/MIDTERM%20TASK/Lab%20Task%202" target="_blank" class="task-card">Lab Task 2</a>
+      <a href="https://github.com/Jammy2316/Portfolio-in-OOP/tree/main/MIDTERM%20TASK/Lab%20Task%203" target="_blank" class="task-card">Lab Task 3</a>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section container">
-    <h2>Contact Me</h2>
-    <form class="contact-form">
-      <div class="mb-3">
-        <label class="form-label">Name</label>
-        <input type="text" class="form-control" placeholder="Your Name" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" placeholder="you@example.com" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Message</label>
-        <textarea class="form-control" rows="4" placeholder="Your message..." required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; <span id="year"></span> Jam Donna. All Rights Reserved.</p>
+    <p>© 2025 Jam Donna Calugay | Portfolio</p>
   </footer>
-
-  <!-- JS Year Script -->
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
